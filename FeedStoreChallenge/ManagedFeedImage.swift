@@ -14,7 +14,9 @@ final class ManagedFeedImage: NSManagedObject {
 	@NSManaged var imageDescription: String?
 	@NSManaged var location: String?
 	@NSManaged var url: URL
+}
 
+extension ManagedFeedImage {
 	var local: LocalFeedImage {
 		return LocalFeedImage(id: id, description: imageDescription, location: location, url: url)
 	}
