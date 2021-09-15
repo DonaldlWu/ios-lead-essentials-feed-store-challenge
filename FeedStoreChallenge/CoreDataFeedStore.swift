@@ -72,7 +72,7 @@ public final class CoreDataFeedStore: FeedStore {
 }
 
 @objc(ManagedCache)
-internal class ManagedCache: NSManagedObject {
+final class ManagedCache: NSManagedObject {
 	@NSManaged var timestamp: Date
 	@NSManaged var feed: NSOrderedSet
 
@@ -93,7 +93,7 @@ internal class ManagedCache: NSManagedObject {
 }
 
 @objc(ManagedFeedImage)
-internal class ManagedFeedImage: NSManagedObject {
+final class ManagedFeedImage: NSManagedObject {
 	@NSManaged var id: UUID
 	@NSManaged var imageDescription: String?
 	@NSManaged var location: String?
